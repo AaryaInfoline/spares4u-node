@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const middleware = require('../middlewares/middleware');
+var middleware = require('../middlewares/middleware');
 app.use(middleware.global);
 app.use('/', express.static('../public/dist'));
 app.use('/data', express.static('../public/storage'));
