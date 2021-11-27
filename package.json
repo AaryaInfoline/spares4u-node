@@ -1,0 +1,27 @@
+{
+  "name": "spares4u",
+  "version": "1.0.0",
+  "description": "Simple Solution",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest",
+    "seed": "node models/seed.js",
+    "start": "node index.js",
+    "installdev": "npm install",
+    "installprod": "npm install --production",
+    "devstart": "npx nodemon index.js"
+  },
+  "author": "Harikrushna Patel",
+  "license": "MIT License",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "mariadb": "^2.5.3",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6"
+  }
+}
