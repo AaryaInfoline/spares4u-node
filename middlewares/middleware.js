@@ -1,7 +1,7 @@
-module.exports.global=[
-    require('./crossorigin.middlewares'), // cross origin 
+module.exports.global = [
+    require('./crossorigin.mw'), // cross origin 
     require('express').json()  // access body data
 ];
 module.exports.one = {
-    userauth:require('./userauth.middleware'),
+    userauth: require('./web/userauth.middleware'),
 }
