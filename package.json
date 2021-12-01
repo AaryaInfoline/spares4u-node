@@ -4,7 +4,7 @@
   "description": "Simple Solution",
   "main": "index.js",
   "scripts": {
-    "test": "npx jest",
+    "test": "npx jest --detectOpenHandles",
     "seed": "node models/seed.js",
     "start": "node index.js",
     "installdev": "npm install",
