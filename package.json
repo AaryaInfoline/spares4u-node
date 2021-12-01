@@ -9,7 +9,8 @@
     "start": "node index.js",
     "installdev": "npm install",
     "installprod": "npm install --production",
-    "devstart": "npx nodemon index.js"
+    "devstart": "npx nodemon index.js",
+    "gitpush": "git add . && git commit -m updatefromRA && git push"
   },
   "author": "Harikrushna Patel",
   "license": "MIT License",
