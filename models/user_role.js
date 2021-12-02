@@ -1,8 +1,9 @@
 const { sequelize, DataTypes, Model } = require("../config/db.config");
+const { USERS } = require("./USERS");
 
-class user_sessions extends Model { }
+class user_role extends Model { }
 
-user_sessions.init(
+user_role.init(
     {
         id: {
             autoIncrement: true,
@@ -11,8 +12,13 @@ user_sessions.init(
             primaryKey: true,
         },
         user_id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.BIGINT,
             allowNull: false,
+            references:{
+                model:USERS,
+                key:"ID",
+                deferrable:"userroleref"
+            }  
         },
         user_role: {
             type: DataTypes.INTEGER,
@@ -21,9 +27,9 @@ user_sessions.init(
     },
     {
         sequelize,
-        tableName: "user_sessions",
+        tableName: "user_role",
         timestamps: true,
     }
 );
 
-module.exports.user_sessions = user_sessions;
+module.exports.user_role = user_role;

@@ -1,0 +1,32 @@
+POST http://localhost:4000/api/user/auth/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "mobile": 1234567890,
+    "email": "email@email.com",
+    "name": "fksdfkljdskl",
+    "password": "fksdfkljdskl"
+}
+###
+POST http://localhost:4000/api/user/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "mobile": 2323,
+    "password": "fksdfkljdskl"
+}
+###
+POST http://localhost:4000/api/user/auth/refresh HTTP/1.1
+Content-Type: application/json
+
+{
+    "authtoken": 2323,
+    "reftoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGX05BTUUiOiJma3NkZmtsamRza2wiLCJNX05BTUUiOm51bGwsIkxfTkFNRSI6bnVsbCwiTU9CSUxFX05PIjoyMzIzLCJFTUFJTF9JRCI6ImVtYWlsQGVtYWlsLmNvbSIsIlBBUkVOVF9JRCI6bnVsbCwiaWQiOjU1LCJ1c2VyX2lkIjoxNCwiZXhwaXJlc0luIjoiMjAyMi0xMi0wMlQwOToxNjowMi4wMDBaIiwidHlwZSI6MSwiaWF0IjoxNjM4NDM2NTYyLCJleHAiOjE2Njk5OTQxNjJ9.HpqXY71G1TSiUSBC7uDtIRdmzWa3EU7sPzCQjA4mVzQ"
+}
+
+###
+GET  http://localhost:4000/api/user/auth/check HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGX05BTUUiOiJma3NkZmtsamRza2wiLCJNX05BTUUiOm51bGwsIkxfTkFNRSI6bnVsbCwiTU9CSUxFX05PIjoyMzIzLCJFTUFJTF9JRCI6ImVtYWlsQGVtYWlsLmNvbSIsIlBBUkVOVF9JRCI6bnVsbCwiaWQiOjU1LCJ1c2VyX2lkIjoxNCwiZXhwaXJlc0luIjoiMjAyMi0xMi0wMlQwOToxNjowMi4wMDBaIiwidHlwZSI6MiwiaWF0IjoxNjM4NDM4Nzk4LCJleHAiOjE2Mzg0Mzg4NTh9.5kA5-Ph-cTGvlDWBbp7gXJ-LQ_ItunI8CrxpIVq5PMQ
+
+

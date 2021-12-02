@@ -14,6 +14,10 @@ shortcodes.init(
             type: DataTypes.STRING(30),
             allowNull: false,
         },
+        submodule:{
+            type: DataTypes.STRING(30),
+            allowNull: false,
+        },
         key: {
             type: DataTypes.INTEGER,
             allowNull: false,

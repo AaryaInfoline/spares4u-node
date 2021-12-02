@@ -3,5 +3,6 @@ module.exports.global = [
     require('express').json()  // access body data
 ];
 module.exports.one = {
-    userauth: require('./web/userauth.middleware'),
+    webuserauth: require('./web/userauth.middleware'),
+    mobileuserauth: require('./mobile/userauth.mw'),
 }
