@@ -59,11 +59,11 @@ module.exports = class countryControllerClass {
         var status = 500;
         var success = false;
         var message = [];
-        var data ={};
+        var data = {};
         try {
             var countrylist = await countryMaster.findAndCountAll({
-                attributes:{
-                    exclude:['createdAt','updatedAt']
+                attributes: {
+                    exclude: ['createdAt', 'updatedAt']
                 }
             });
             if (countrylist.count > 0) {
@@ -76,6 +76,6 @@ module.exports = class countryControllerClass {
         } catch (error) {
             message.push("Error Occurs")
         }
-        res.json({status,success,message:message.join(),...data})
+        res.json({ status, success, message: message.join(), ...data })
     }
 }

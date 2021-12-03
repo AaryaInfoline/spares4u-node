@@ -5,7 +5,7 @@ var moment = require('moment');
 
 module.exports = class authController {
     static async register(req, res) {
-        var status = 400;
+        var status = 500;
         var success = false;
         var message = [];
         try {
@@ -151,9 +151,9 @@ module.exports = class authController {
     }
     static checkauth(req, res) {
         res.json({
-            status:200,
+            status: 200,
             success: true,
-            message:"ok"
+            message: "ok"
         })
     }
 }

@@ -9,7 +9,6 @@ module.exports = (req, res, next) => {
     }
     try {
         var response = jwt.verify(req.headers.authorization, process.env.AUTH_SECRATE_KEY);
-        //console.log(response);
         req.user = response;
         next();
     } catch (err) {
