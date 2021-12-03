@@ -9,4 +9,8 @@ routes.post('/user/auth/login',userController.login);
 routes.post('/user/auth/refresh',userController.refreshToken);
 routes.get('/user/auth/check',middleware.mobileuserauth,userController.checkauth);
 
+const countryController = require('../controllers/country.controller');
+routes.post('/country/create',middleware.mobileuserauth,countryController.createCountry);
+routes.post('/country/update',middleware.mobileuserauth,countryController.editCountry);
+routes.get('/country/list',middleware.mobileuserauth,countryController.fetchCountry);
 module.exports = routes;

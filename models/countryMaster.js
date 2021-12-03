@@ -12,7 +12,8 @@ countryMaster.init(
     },
     COUNTRY_NAME: {
       type: DataTypes.STRING(50),
-      allowNull: true,
+      allowNull: false,
+      unique:true
     },
     CONTINENT: {
       type: DataTypes.STRING(50),

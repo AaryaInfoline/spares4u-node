@@ -18,17 +18,19 @@ module.exports = class authController {
             });
             if (user) {
                 success = true;
+                status = 200;
                 message.push("user Created");
             } else {
                 message.push("user Not Created");
             }
         } catch (err) {
             console.log(err);
-            message.push("Error occurs ");
+            message.push("Enter Valid Number");
         }
         res.json({ status, success, message: message.join() })
     }
     static async login(req, res) {
+        console.log(req.body);
         var message = [];
         var success = false;
         var status = 404;
@@ -149,7 +151,9 @@ module.exports = class authController {
     }
     static checkauth(req, res) {
         res.json({
-            success: true
+            status:200,
+            success: true,
+            message:"ok"
         })
     }
 }

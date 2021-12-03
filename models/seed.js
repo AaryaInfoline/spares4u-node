@@ -3,8 +3,8 @@
   //await require("./makeMaster").makeMaster.sync({ alter: true });
   //await require("./yearMaster").yearMaster.sync({ alter: true });
   //await require("./sideMaster").sideMaster.sync({ alter: true });
-  await require("./user_role").user_role.drop();
-  await require("./USERS").USERS.sync({ force: true });
+  //await require("./user_role").user_role.drop();
+  //await require("./USERS").USERS.sync({ force: true });
   //await require("./sideMaster").sideMaster.sync({ alter: true });
   //await require("./groupMaster").groupMaster.sync({ alter: true });
   //await require("./itemMaster").itemMaster.sync({ alter: true });

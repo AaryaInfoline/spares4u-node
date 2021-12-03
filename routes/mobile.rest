@@ -2,18 +2,18 @@ POST http://localhost:4000/api/user/auth/create HTTP/1.1
 Content-Type: application/json
 
 {
-    "mobile": 1234567890,
+    "mobile": 1234567891,
     "email": "email@email.com",
     "name": "fksdfkljdskl",
-    "password": "fksdfkljdskl"
+    "password": "1234"
 }
 ###
 POST http://localhost:4000/api/user/auth/login HTTP/1.1
 Content-Type: application/json
 
 {
-    "mobile": 2323,
-    "password": "fksdfkljdskl"
+    "mobile": 1234567891,
+    "password": "1234"
 }
 ###
 POST http://localhost:4000/api/user/auth/refresh HTTP/1.1
@@ -27,6 +27,30 @@ Content-Type: application/json
 ###
 GET  http://localhost:4000/api/user/auth/check HTTP/1.1
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGX05BTUUiOiJma3NkZmtsamRza2wiLCJNX05BTUUiOm51bGwsIkxfTkFNRSI6bnVsbCwiTU9CSUxFX05PIjoyMzIzLCJFTUFJTF9JRCI6ImVtYWlsQGVtYWlsLmNvbSIsIlBBUkVOVF9JRCI6bnVsbCwiaWQiOjU1LCJ1c2VyX2lkIjoxNCwiZXhwaXJlc0luIjoiMjAyMi0xMi0wMlQwOToxNjowMi4wMDBaIiwidHlwZSI6MiwiaWF0IjoxNjM4NDM5NTU0LCJleHAiOjE2Mzg0Mzk2MTR9.QkCACh8iuQVz9D7ISUTtF57QwIkkwjbeyTgqSuZYaT4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGX05BTUUiOiJma3NkZmtsamRza2wiLCJNX05BTUUiOm51bGwsIkxfTkFNRSI6bnVsbCwiTU9CSUxFX05PIjoyMzIzLCJFTUFJTF9JRCI6ImVtYWlsQGVtYWlsLmNvbSIsIlBBUkVOVF9JRCI6bnVsbCwiaWQiOjU1LCJ1c2VyX2lkIjoxNCwiZXhwaXJlc0luIjoiMjAyMi0xMi0wMlQwOToxNjowMi4wMDBaIiwidHlwZSI6MiwiaWF0IjoxNjM4NDQzMzQ0LCJleHAiOjE2Mzg0NDM0MDR9.Ejrq80ClUAVJTku7dpDvXS_OYesOd6lm9XyugeCkI8c
 
+###
+POST  http://localhost:4000/api/country/create HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGX05BTUUiOiJma3NkZmtsamRza2wiLCJNX05BTUUiOm51bGwsIkxfTkFNRSI6bnVsbCwiTU9CSUxFX05PIjoyMzIzLCJFTUFJTF9JRCI6ImVtYWlsQGVtYWlsLmNvbSIsIlBBUkVOVF9JRCI6bnVsbCwiaWQiOjU1LCJ1c2VyX2lkIjoxNCwiZXhwaXJlc0luIjoiMjAyMi0xMi0wMlQwOToxNjowMi4wMDBaIiwidHlwZSI6MiwiaWF0IjoxNjM4NTE1MDc1LCJleHAiOjE2Mzg2MDE0NzV9.IH-OoJaE98TjJCBLtj4wOxumgL7Ge32JUeWcZqGm6r0
 
+{
+    "name":"China",
+    "continent":"asia"
+}
+
+###
+POST  http://localhost:4000/api/country/update HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGX05BTUUiOiJma3NkZmtsamRza2wiLCJNX05BTUUiOm51bGwsIkxfTkFNRSI6bnVsbCwiTU9CSUxFX05PIjoyMzIzLCJFTUFJTF9JRCI6ImVtYWlsQGVtYWlsLmNvbSIsIlBBUkVOVF9JRCI6bnVsbCwiaWQiOjU1LCJ1c2VyX2lkIjoxNCwiZXhwaXJlc0luIjoiMjAyMi0xMi0wMlQwOToxNjowMi4wMDBaIiwidHlwZSI6MiwiaWF0IjoxNjM4NTE1MDc1LCJleHAiOjE2Mzg2MDE0NzV9.IH-OoJaE98TjJCBLtj4wOxumgL7Ge32JUeWcZqGm6r0
+
+{
+    "id":"1",
+    "name":"Algeria",
+    "continent":"Africa"
+}
+
+###
+GET  http://localhost:4000/api/country/list 
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGX05BTUUiOiJma3NkZmtsamRza2wiLCJNX05BTUUiOm51bGwsIkxfTkFNRSI6bnVsbCwiTU9CSUxFX05PIjoyMzIzLCJFTUFJTF9JRCI6ImVtYWlsQGVtYWlsLmNvbSIsIlBBUkVOVF9JRCI6bnVsbCwiaWQiOjU1LCJ1c2VyX2lkIjoxNCwiZXhwaXJlc0luIjoiMjAyMi0xMi0wMlQwOToxNjowMi4wMDBaIiwidHlwZSI6MiwiaWF0IjoxNjM4NTE1MDc1LCJleHAiOjE2Mzg2MDE0NzV9.IH-OoJaE98TjJCBLtj4wOxumgL7Ge32JUeWcZqGm6r0
