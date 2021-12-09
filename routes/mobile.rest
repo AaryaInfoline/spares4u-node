@@ -53,4 +53,156 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGX05BTUUiOiJma3NkZmtsamRz
 ###
 GET  http://localhost:4000/api/country/list 
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGX05BTUUiOiJma3NkZmtsamRza2wiLCJNX05BTUUiOm51bGwsIkxfTkFNRSI6bnVsbCwiTU9CSUxFX05PIjoyMzIzLCJFTUFJTF9JRCI6ImVtYWlsQGVtYWlsLmNvbSIsIlBBUkVOVF9JRCI6bnVsbCwiaWQiOjU1LCJ1c2VyX2lkIjoxNCwiZXhwaXJlc0luIjoiMjAyMi0xMi0wMlQwOToxNjowMi4wMDBaIiwidHlwZSI6MiwiaWF0IjoxNjM4NTE1MDc1LCJleHAiOjE2Mzg2MDE0NzV9.IH-OoJaE98TjJCBLtj4wOxumgL7Ge32JUeWcZqGm6r0
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGX05BTUUiOiJma3NkZmtsamRza2wiLCJNX05BTUUiOm51bGwsIkxfTkFNRSI6bnVsbCwiTU9CSUxFX05PIjoyMzIzLCJFTUFJTF9JRCI6ImVtYWlsQGVtYWlsLmNvbSIsIlBBUkVOVF9JRCI6bnVsbCwiaWQiOjU1LCJ1c2VyX2lkIjoxNCwiZXhwaXJlc0luIjoiMjAyMi0xMi0wMlQwOToxNjowMi4wMDBaIiwidHlwZSI6MiwiaWF0IjoxNjM4NjA1NTY1LCJleHAiOjE2Mzg2OTE5NjV9.BvuyYBqQTFnUNdFjVGQxiXusMXS8AgvTVv82Ft1kMVg
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGX05BTUUiOiJma3NkZmtsamRza2wiLCJNX05BTUUiOm51bGwsIkxfTkFNRSI6bnVsbCwiTU9CSUxFX05PIjoyMzIzLCJFTUFJTF9JRCI6ImVtYWlsQGVtYWlsLmNvbSIsIlBBUkVOVF9JRCI6bnVsbCwiaWQiOjU1LCJ1c2VyX2lkIjoxNCwiZXhwaXJlc0luIjoiMjAyMi0xMi0wMlQwOToxNjowMi4wMDBaIiwidHlwZSI6MiwiaWF0IjoxNjM4ODY1NTE3LCJleHAiOjE2Mzg5NTE5MTd9.wSs-qQG2ZCaHzUXu9op8OSWe_0DC2cM_PdhJwLlkhLo
+### 
+POST http://localhost:4000/api/company/create
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "companyname":"name",
+    "coutnryid":1,
+    "companylogo":"fasdjfjslkdj flkajsdkf lksdj fkldsflkj dslkjsdflk jsdlkf jlksld flkjsdk",
+    "companyurl":"dfasdfsd"
+}
+
+###
+GET http://localhost:4000/api/company/list
+Authorization: {{token}}
+
+### 
+POST http://localhost:4000/api/company/update
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "id":11,
+    "companyname":"name",
+    "coutnryid":1,
+    "companylogo":"jj",
+    "companyurl":"jj"
+}
+### 
+POST http://localhost:4000/api/years/create
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "desc":"dfasdfsd"
+}
+
+###
+GET http://localhost:4000/api/years/list
+Authorization: {{token}}
+
+### 
+POST http://localhost:4000/api/years/update
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "id":11,
+    "desc":"jj"
+}
+### 
+POST http://localhost:4000/api/group/create
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "name":"dfasdfsd"
+}
+
+###
+GET http://localhost:4000/api/group/list
+Authorization: {{token}}
+
+### 
+POST http://localhost:4000/api/group/update
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "id":11,
+    "name":"jj"
+}
+
+
+### 
+POST http://localhost:4000/api/side/create
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "name":"dfasdfsd"
+}
+
+###
+GET http://localhost:4000/api/side/list
+Authorization: {{token}}
+
+### 
+POST http://localhost:4000/api/side/update
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "id":21,
+    "name":"jj"
+}
+
+###
+GET http://localhost:4000/api/item/list
+Authorization: {{token}}
+
+### 
+
+POST http://localhost:4000/api/item/create
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "companyid":"jj",
+    "groupid":"1",
+    "yearid":1,
+    "sideid":2,
+    "itemname":2,
+    "itemdesc":2,
+    "itemprice":3,
+    "image1":1,
+    "image2":1,
+    "image3":1,
+    "image4":1,
+    "image5":1,
+    "videourl":1,
+    "auth_data":1,
+    "auth_user":1,
+    "suth_datetime":1
+}
+
+###
+POST http://localhost:4000/api/item/update
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "id":1,
+    "companyid":"jj",
+    "groupid":"2",
+    "yearid":1,
+    "sideid":2,
+    "itemname":2,
+    "itemdesc":2,
+    "itemprice":3,
+    "image1":1,
+    "image2":1,
+    "image3":1,
+    "image4":1,
+    "image5":1,
+    "videourl":1,
+    "auth_data":1,
+    "auth_user":1,
+    "suth_datetime":1
+}

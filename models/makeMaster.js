@@ -1,6 +1,6 @@
 const { sequelize, DataTypes, Model } = require("../config/db.config");
 const { countryMaster } = require("./countryMaster");
-class makeMaster extends Model {}
+class makeMaster extends Model { }
 
 makeMaster.init(
   {
@@ -18,6 +18,14 @@ makeMaster.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
+    COMPANY_LOGO_URL: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    COMPANY_URL:{
+      type:DataTypes.STRING(200),
+      allowNull:true
+    }
   },
   {
     sequelize,

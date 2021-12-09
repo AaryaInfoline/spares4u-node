@@ -68,6 +68,8 @@ module.exports = class countryControllerClass {
             });
             if (countrylist.count > 0) {
                 status = 200;
+                success = true;
+                message.push("List")
                 data.count = countrylist.count;
                 data.data = countrylist.rows;
             } else {
@@ -76,6 +78,7 @@ module.exports = class countryControllerClass {
         } catch (error) {
             message.push("Error Occurs")
         }
+       // console.log({ status, success, message: message.join(), ...data })
         res.json({ status, success, message: message.join(), ...data })
     }
 }
